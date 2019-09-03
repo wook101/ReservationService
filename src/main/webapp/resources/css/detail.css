@@ -1,0 +1,481 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	background-color: #d3dcdf;
+}
+:root{
+	--width:500px;
+}
+.main {
+	width: var(--width);
+	margin:auto;
+	background-color: #dadbdd;
+	position: relative;
+	overflow: hidden;
+}
+
+#img_slide {
+	position: absolute;
+	width: 100%;
+	height: 400px;
+	left: 0;
+	transition: all 0.3s;
+}
+
+.title_img {
+	float: left;
+	z-index: 1;
+	height: 400px;
+}
+
+.title_main {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 400px;
+	background-color: rgba(19, 16, 16, 0.36);
+}
+
+.gnb {
+	padding: 10px;
+	height: 60px;
+}
+
+.logo {
+	float: left;
+	cursor: pointer;
+}
+
+.logo img {
+	height: 30px;
+}
+
+.reservation_login {
+	float: right;
+	width:60%;
+	overflow:auto;
+	text-align:right;
+	padding:2px 0 0 0;
+	font-size:19px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.arrows_title_area {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	text-align: center;
+}
+
+#oval_area {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 25px;
+	background-color: rgba(0, 0, 0, 0.36);
+	border-radius: 20px/20px;
+}
+
+#current_img_number {
+	color: #fff;
+}
+
+#total_imgs_cnt {
+	color: #9c9c9c;
+}
+
+#arrows_left_btn {
+	position: absolute;
+	display: none;
+	height:30px;
+	top: 50%;
+	margin: 0 0 0 5%;
+	cursor: pointer;
+	margin-top: -50px;
+}
+
+#arrows_right_btn {
+	position: absolute;
+	display: none;
+	height:30px;
+	top: 50%;
+	right: 0;
+	margin: 0 5% 0 0; 
+	cursor: pointer;
+	margin-top: -50px;
+}
+
+.centerTitle {
+	position: absolute;
+	width:200px;
+	top: 50%;
+	left: 65%;
+	color: #fff;
+	font-family: "굴림";
+	font-size: 25px;
+	font-weight: bold;
+	margin: -50px 0 0 -150px;
+}
+
+.expandBtn {
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	background-color: rgb(237, 236, 236);
+}
+
+.detail_content {
+	height: 73px;
+	margin: 0px;
+	padding: 15px;
+	font-family: "나눔고딕";
+	font-size: 16px;
+	font-weight: 450;
+	background-color: rgb(255, 255, 255);
+	line-height: 28px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.more, .close {
+	font-size: 16px;
+	font-weight: bold;
+	color: rgb(99, 96, 96);
+	cursor: pointer;
+}
+
+.eventInfo {
+	background-color: #fcfcde;
+	padding: 0px 15px 15px 15px;
+	margin: 10px 0px 10px 0px;
+}
+
+.eventInfo_area {
+	font-size: 16px;
+	border-bottom: solid 1px #dbdbdb;
+	padding: 0px 0px 0px 0px;
+}
+
+.eventInfo_area h5 {
+	font-size: 16px;
+	height: 70px;
+	line-height: 70px;
+	margin: 0;
+}
+
+.eventInfo_area h5, .eventInfo_area img {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.eventInfo_content {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "굴림";
+	padding: 10px 0px 0px 0px;
+}
+
+.eventInfo_content p {
+	margin-bottom: 5px;
+}
+
+.reserving {
+	margin: 0;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	background-color: #00c73c;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#reserving_img {
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.reserve_user_comment {
+	padding: 15px;
+	background-color: #fff;
+	border-bottom: solid 2px #c3c1c1;
+}
+
+.avg_score_area {
+	border-bottom: solid 2px #dbdbdb;
+	padding: 0px 0px 10px 0px;
+}
+
+.comment_title {
+	font-size: 16px;
+	padding: 0px 0px 5px 0px;
+	margin: 0;
+}
+
+.star_off {
+	display: inline-block;
+	position: relative;
+	width: 110px;
+	height: 20px;
+}
+
+.img_off {
+	position: absolute;
+	width: 110px;
+	height: 20px;
+}
+
+.star_on {
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+}
+
+.img_on {
+	width: 110px;
+	height: 20px;
+}
+
+.avg_score {
+	margin: 0px 0px 0px 10px;
+	font-size: 16px;
+}
+
+.avg_score em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.comment_count {
+	float: right;
+	font-size: 16px;
+}
+
+.comment_cnt {
+	font-style: normal;
+	font-weight: bold;
+	color: #7fd563;
+}
+
+.reserve_user_comment li {
+	list-style: none;
+	padding: 10px 0px 10px 0px;
+	border-bottom: solid 2px #dbdbdb;
+}
+
+.comment, .score, .user_id, .visit_day {
+	display: inline-block;
+}
+
+.comment_list div {
+	clear: right;
+}
+
+.comment_list h3 {
+	float: left;
+	width: 230px;
+	font-size: 16px;
+	margin: 0;
+}
+
+.comment_img {
+	float: right;
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+}
+
+.comment_list .comment {
+	font-size: 16px;
+}
+
+.comment_list .comment {
+	margin: 0;
+	padding: 10px 0px 0px 0px;
+	width: 230px;
+}
+
+.comment {
+	position: relative;
+	display: block;
+	top: 5px;
+}
+
+.comment_log_area {
+	padding: 10px 0px 0px 0px;
+	font-size: 16px;
+}
+
+.comment_log_area h5, p {
+	margin: 0px;
+}
+
+.comment_log_area p {
+	color: gray;
+}
+
+.comment_more {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	background-color: rgb(238, 242, 247);
+	cursor: pointer;
+}
+
+.top_info_area {
+	margin-top: 10px;
+	background-color: #fff;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#detail_info {
+	float: left;
+	height: 50px;
+	margin-left: 20%;
+	cursor: pointer;
+}
+
+#come_route {
+	float: right;
+	height: 50px;
+	margin-right: 20%;
+	cursor: pointer;
+}
+
+.current_select {
+	height: 58px;
+	color: #00b336;
+	border-bottom: 3px solid #00b336;
+}
+
+.bottom_detail {
+	padding: 20px;
+	background-color: #fff;
+	border-top: solid 1px #c8c3c3;
+	border-bottom: solid 1px #c8c3c3;
+}
+
+.bottom_detail p {
+	font-size: 16px;
+	font-family: "맑은 고딕";
+	line-height: 25px;
+}
+/* 상세정보 */
+.bottom_detail h5 {
+	font-size: 18px;
+}
+
+.notice_img {
+	margin-left: 10px;
+	width: 100%;
+}
+/* 오시는길 */
+#map {
+	width: 100%;
+	height: 400px;
+}
+
+#come_description {
+	margin: 15px 0px 10px 0px;
+}
+
+#location_img, #call_img {
+	width: 20px;
+	height: 20px;
+}
+
+#come_place_lot, #come_place_street, #come_tel {
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "고딕체";
+}
+
+#address_text {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	font-style: normal;
+	color: gray;
+}
+
+#come_place_street {
+	display: inline-block;
+	width: 75%;
+}
+
+#come_place_name {
+	font-size: 17px;
+	font-weight: 500;
+	font-family: "고딕체";
+	color: gray;
+	margin: 0px 0px 10px 20px;
+}
+
+.routeArea {
+	margin-top: 10px;
+	background-color: #ededed;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.searchRoute_img, .navigation_img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+
+.searchRoute_text {
+	
+}
+
+.searchRoute_text, .navigation_text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: bold;
+	color: gray;
+	cursor: pointer;
+}
+
+.navigation_img {
+	
+}
+
+#line {
+	display: inline-block;
+	font-size: 20px;
+	color: #bebebe;
+	margin: 0 10% 0 10%;
+}
+
+.top {
+	height: 50px;
+	line-height: 50px;
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+@media screen and (max-width:414px){
+	:root{
+		--width:100%;
+	}	
+}
