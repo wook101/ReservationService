@@ -1,0 +1,168 @@
+body, html {
+   height: 100%;
+   margin:0;  
+   background-color:#d3dcdf;
+
+}
+:root{
+	--width:500px;
+}
+.main{
+  width:var(--width);
+  margin:auto;
+  background-color:#e8e9ec;
+}
+#backBtn{
+	padding: 5px 0px 0px 10px;
+	width:8%;
+	cursor:pointer;
+}
+
+.reviewWrite_title{
+	height:auto;
+	padding: 0 0 5px 0;
+	background-color:#fff;
+}
+.reviewWrite_title h2{
+	display:inline-block;
+	vertical-align:top;
+	overflow:auto;
+	width:80%;
+	margin:0;
+	font-size:18px;
+	padding:10px 10px 0 0;
+	text-align:center;
+	cursor:pointer;
+}
+
+#write_content_area{
+	width:100%;
+	height:auto;
+	padding:15px;
+	margin-top:10px;
+	background-color:#fff;
+	box-sizing: border-box;
+}
+.write_content_top_area{
+	text-align:center;
+}
+#top_text{
+	margin:10px 0 10px 0;
+	font-size:16px;
+}
+#starScoreArea{
+	position:relative;
+	top:3px;
+	width:100%;
+	height:100px;
+}
+#star_area{
+	position:absolute;
+	width:100%;
+	height:50px;
+	
+}
+
+.grayStarImg,.redStarImg{
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+
+
+#starScore{
+	font-style:normal;
+	font-size:40px;
+	font-weight:500;
+	margin-left:10px;
+	bottom:5px;
+}
+
+#writeTextBox{
+	width:100%;
+	height:250px;
+	font-size:18px;
+	font-weight:bold;
+	color:#8f8e8f;
+	padding:10px;
+	margin:20px 0 0 0;
+	box-sizing: border-box;
+	border-color:#dbdbdb;
+}
+
+.filebox{
+	border-right:solid 1px #dbdbdb;
+	border-left:solid 1px #dbdbdb;
+	border-bottom:solid 1px #dbdbdb;
+	padding:0 10px 10px 10px;
+}
+#fileBoxImg{
+	position:relative;
+	top:8px;
+	width:30px;
+	height:30px;
+}
+.filebox label{
+	font-family:"고딕";
+	font-size:18px;
+	font-weight:500;
+	cursor:pointer;
+}
+.filebox input[type="file"]{ /*파일 필드 숨기기*/
+	position:absolute;
+	width:1px;
+	height:1px;
+}
+
+#textCount_area{
+	float:right;
+	margin-top:10px;
+	color:gray;
+	font-size:18px;
+}
+#textCount_area em{
+	font-style:normal;
+}
+#reviewRegisterBtn{
+	height:50px;
+	line-height:50px;
+	background-color:#03b217;
+	font-size:18px;
+	font-family:"고딕";
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+	margin:10px;
+}
+#thumbnail_area{
+	position:relative;
+	display:inline-block;
+	height:150px;
+	padding:10px;
+}
+#thumbnailImg{
+	width:200px;
+	height:150px;
+}
+#closeBtnImg{
+	position:absolute;
+	right:10px;
+	width:30px;
+	height:30px;
+	cursor:pointer;
+}
+.top{
+  height: 50px;
+  line-height:50px;
+  padding: 0;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color:#dadbdd;
+}
+
+@media screen and (max-width:414px){
+	:root{
+		--width:100%;
+	}	
+}

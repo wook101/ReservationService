@@ -1,0 +1,249 @@
+body, html {
+   height: 100%;
+   margin:0;  
+   background-color:#d3dcdf;
+
+}
+:root{
+	--width:500px;
+}
+.main{
+  width:var(--width);
+  height:auto;
+  margin:auto;
+  background-color:#e8e9ec;
+}
+.main li{
+	list-style:none;
+}
+.logo_area{
+	float:left;
+}
+
+.gnb{
+  width: 100%;
+  height: 50px;
+  background-color: #03b217;
+}
+#logo{
+  display: inline;
+  margin: 10px 5px 10px 10px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor:pointer;
+}
+.reserv{
+	display:inline-block;
+	vertical-align:top;
+  	font-size: 18px;
+  	margin-top:12px;
+  	color: #fff;
+}
+.e-mail{
+	float:right;
+	width:60%;
+	text-align:right;
+	overflow:auto;
+	margin: 0px 10px 0px 0px;
+	padding: 12px 0px 0px 0px;
+	font-size: 18px;
+	color: #fff;
+	cursor:pointer;
+}
+.summaryInfo_area{
+	width:100%;
+	height:80px;
+	padding:10px 0 0 0;
+	background-color: #03b217;
+}
+
+.summaryInfo_block{
+	float:left;
+	width:25%;
+	height:100%;
+	text-align:center;
+}
+.summaryInfo_block_text{
+	display:inline-block;
+	vertical-align:top;
+	color:#ffffffcf;
+	margin-top:5px;
+	font-family:"고딕";
+	font-weight:bold;
+	font-size:14px;
+}
+.summaryInfo_block_img{
+	width:18px;
+	height:18px;
+}
+.summaryInfo_block_num{
+	color:#fff;
+	font-size:18px;
+}
+
+/* 확정된 예약 영역*/
+#rearvation_comfirm_area{
+	margin:10px 0 0 0;
+	padding:15px;
+}
+.reservation_img_area{
+	position:absolute;
+	margin:7px 0 0 30px;
+	height:40px;
+}
+#reservation_img{
+	position:relative;
+	top:10%;
+	width:20px;
+	height:20px;
+}
+#reservation_text{
+	position:relative;
+	top:10%;
+	color:#fff;
+	font-family:"나눔고딕";
+	font-size:16px;
+	font-weight:600;
+	vertical-align:top;
+	
+}
+.top_greenbar_area{
+	width:100%;
+	height:50px;
+}
+.top_greenbar_area img{
+	float:left;
+}
+#greenbar_center_img{
+	width:90%;
+	height:50px;
+}
+#greenbar_left_img{
+	width:5%;
+	height:50px;
+}
+#greenbar_right_img{
+	width:5%;
+	height:50px;
+}
+.rearvation_ul_area{
+	margin:0;
+	padding:0;
+}
+
+.rearvation_li_area{
+	padding:10px 20px 20px 30px;
+	border-bottom:solid 1px #ecebec;
+	background-color:#fff;
+}
+.rearvation_li_top_area{
+	border-bottom:solid 1px #dedbdb;
+	overflow:auto;
+}
+.rearvation_li_top_title_area{
+	float:left;
+	width:80%;
+}
+.rearvation_li_top_title_area em{
+	font-style:normal;
+	font-size:16px;
+	font-weight:bold;
+}
+.rearvation_li_top_title_area h2{
+	font-size:20px;
+	margin:5px 0 10px 0;
+}
+#share_img{
+	position:relative;
+	float:right;
+	top:30%;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+
+.rearvation_li_middle_area{
+	padding:10px 0 10px 0;
+	border-bottom:solid 1px #dedbdb;
+}
+.rearvation_li_middle_area i{
+	font-style:normal;
+	font-size:16px;
+	font-weight:500;
+	font-family:"맑은고딕";
+	color:#868686;
+}
+.rearvation_li_middle_area span{
+	font-size:16px;
+	font-weight:500;
+	font-family:"맑은고딕";
+	margin:0 0 0 10px;
+	
+}
+.rearvation_li_bottom_area{
+	padding:10px 0 0 0;
+}
+.expected_price_area{
+	height:50px;
+}
+.expected_price_text{
+	float:left;
+	font-size:18px;
+	font-weight:600;
+	font-family:"맑은고딕";
+}
+.expected_price{
+	float:right;
+	color:red;
+	font-size:18px;
+	font-family:"맑은고딕";
+	font-weight:600;
+}
+.cancel_btn,.reservation_reivew_btn{
+	width:100%;
+	height:40px;
+	font-size:16px;
+	font-weight:600;
+	font-family:"맑은고딕";
+	background-color:#f3f2f3;
+	border:solid 1px #e1e0e1;
+	cursor:pointer;
+}
+
+/* 이용완료 영역*/
+#rearvation_complete_area{
+	margin:10px 0 0 0;
+	padding:15px;
+}
+
+/* 취소된 예약 영역*/
+#rearvation_cancel_area{
+	margin:10px 0 0 0;
+	padding:15px;
+}
+.top_graybar_area{
+	width:100%;
+	height:50px;
+}
+.top_graybar_area img{
+	float:left;
+}
+#graybar_center_img{
+	width:90%;
+	height:50px;
+}
+#graybar_left_img{
+	width:5%;
+	height:50px;
+}
+#graybar_right_img{
+	width:5%;
+	height:50px;
+}
+
+@media screen and (max-width:414px){
+	:root{
+		--width:100%;
+	}
+}
