@@ -1,5 +1,7 @@
 package kr.or.connect.reserve.controller;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,6 +14,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -41,7 +45,7 @@ import static kr.or.connect.reserve.dao.ReserveDaoSqls.*;
 
 @Controller
 public class ReserveController {
-
+	private Logger logger = LoggerFactory.getLogger(ReserveController.class);
 	@Autowired
 	ReserveService reserveService;
 
@@ -263,20 +267,22 @@ public class ReserveController {
 		int product_id = reviewWriteFromVo.getProduct_id();
 		reserveDao.reservationUserCommentInsert(reviewWriteFromVo, email); // 리뷰 DB에 폼정보 삽입 //ReviewWriteFromVo(상품id,예약정보id, 별점,코멘트,이메일)
 		if(!file.isEmpty()) {
+			logger.debug("리뷰등록 업로드!!");
 			//파일 업로드
 			try(
 					FileOutputStream fos = new FileOutputStream(ReserveService.path+"uploadFile/"+ file.getOriginalFilename());//업로드 경로
+					BufferedOutputStream bos = new BufferedOutputStream(fos);
 					InputStream is = file.getInputStream();
+					BufferedInputStream bis = new BufferedInputStream(is);
 				)
 			{
 			 	int readCount = 0;
 			 	byte[] buffer = new byte[1024];
-			 	while((readCount = is.read(buffer)) != -1){
-			 		fos.write(buffer,0,readCount);
+			 	while((readCount = bis.read(buffer)) != -1){
+			 		bos.write(buffer,0,readCount);
 			 	}
-				 	
 			}catch(Exception e) {
-				System.out.println("file Save Error");
+				logger.debug("리뷰등록 파일 업로드 error");
 			}
 		}
 		return "redirect:/review/" + product_id;
@@ -301,16 +307,18 @@ public class ReserveController {
 		//파일 다운로드
 		try (
 				FileInputStream fis = new FileInputStream(filePath); 
+				BufferedInputStream bis = new BufferedInputStream(fis);
 				OutputStream out = response.getOutputStream();
+				BufferedOutputStream bos = new BufferedOutputStream(out);
 			)
 		{
 			int readCount = 0;
 			byte[] buffer = new byte[1024];
-			while ((readCount = fis.read(buffer)) != -1) {
-				out.write(buffer, 0, readCount);
+			while ((readCount = bis.read(buffer)) != -1) {
+				bos.write(buffer, 0, readCount);
 			}
 		} catch (Exception e) {
-			throw new RuntimeException("file Save Error");
+			logger.debug("파일 다운로드 화면 랜더링 error");
 		}
 		
 	}
