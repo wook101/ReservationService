@@ -1,4 +1,5 @@
-# naver예약서비스 프로젝트 구현하기
-spring 모바일 웹앱 naver예약서비스
+# naver예약서비스 
+
+사용기술 - css, javascript, jQuery, Ajax, java, jsp, jstl, el, spring, springJDBC
 
 수정중..
