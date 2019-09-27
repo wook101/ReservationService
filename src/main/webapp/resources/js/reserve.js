@@ -100,7 +100,7 @@ function userTermsAllAgreeBtn(){
 	//활성화
 	$('#user_agree_title_img_disabled').click(function(){
 		//예매자 정보가 모두 입력되고 티켓 수가 1이상일때 예약하기 버튼 활성화
-		if($('#reservationUser_input').val()!=''&& $('#phoneNumber_input').val()!=''&& $('#e_mail_input').val()!=''&& Number($('#total_ticketCount').text())!=0){
+		if(formValidation()){
 			$('#user_agree_title_img_disabled').css('display','none');
 			$('#user_agree_title_img_active').css('display','block');
 			//배경
@@ -146,7 +146,18 @@ function userTermsPrivateInfoToggle(){
 	});
 	
 }
-
+function formValidation(){
+	var errorComment = '형식이 틀렸습니다.';
+	if($('#reservationUser_input').val()!=''&&
+	   $('#phoneNumber_input').val()!=''&&
+	   $('#phoneNumber_input').val()!= errorComment&&
+	   $('#e_mail_input').val()!=''&&
+	   $('#e_mail_input').val()!= errorComment&&
+	   Number($('#total_ticketCount').text())!=0){
+		return true;
+	}
+	return false;
+}
 function formValidationCheck(){
 	var errorComment = '형식이 틀렸습니다.';
 	//연락처 유효성 검사
@@ -202,15 +213,12 @@ function reservationBtn(){
 function init(){
 	//각 리스트에 연령별 티켓 가격 적용
 	ticketList_price_apply();
-	
 	//이용자 약관 전체동의
 	userTermsAllAgreeBtn();
 	//이용자 약관 개인정보 수집 접기-펼치기
 	userTermsPrivateInfoToggle();
-	
 	//입력 폼 유효성 검사
 	formValidationCheck();
-	
 	//예약하기
 	reservationBtn();
 };

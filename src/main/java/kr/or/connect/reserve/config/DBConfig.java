@@ -20,6 +20,7 @@ public class DBConfig implements TransactionManagementConfigurer{
 	private String username = "";
 	private String password = "";
 	*/
+	
 	//로컬 db계정
 	private String url = "jdbc:mysql://localhost:3306/project4_db?useUnicode=true&characterEncoding=utf8";
 	private String username = "connectuser2";
