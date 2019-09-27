@@ -13,7 +13,7 @@
   	<spring.version>4.3.5.RELEASE</spring.version>
   	 
   	 <!-- jackson -->
-	<jackson2.version>2.9.9</jackson2.version>
+	<jackson2.version>2.9.10</jackson2.version>
   </properties>
   
   <dependencies>
