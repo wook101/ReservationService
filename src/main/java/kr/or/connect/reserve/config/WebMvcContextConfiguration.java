@@ -34,12 +34,6 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
-   
-    //특별한 url요청을 안했을때 
-    @Override
-    public void addViewControllers(final ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("mainpage");
-    }
     
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {

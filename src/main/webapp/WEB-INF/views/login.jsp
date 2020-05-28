@@ -19,7 +19,7 @@
 			<div class="login_title_text">예약</div>
 		</div>
 
-		<form class="login_form_area" method="post" action="reservationCheck">
+		<form class="login_form_area" method="post" action="reserveCheck">
 			<div class="login_form_top_area">
 				<h5>비회원 예약확인</h5>
 			</div>

@@ -31,7 +31,7 @@ header div {
 
 #logo {
 	display: inline-block;
-	background: url(/ReservationService/img/main/naverLogo.PNG);
+	background: url(/img/main/naverLogo.PNG);
 	background-size: contain;
 	margin: 10px;
 	padding: 0;
@@ -96,7 +96,7 @@ header div {
 .category li {
 	display: inline-block;
 	padding: 20px 3px 20px 3px;
-	font-family: "돋움";
+	font-family: "�룍��";
 	font-weight: bold;
 	font-size:15px;
 	cursor: pointer;
@@ -176,7 +176,7 @@ header div {
 .product_List li p {
 	margin: 0px;
 	padding: 15px;
-	font-family: "나눔고딕";
+	font-family: "�굹�닎怨좊뵓";
 	font-size: 15px;
 	font-weight: 450;
 	color: gray;

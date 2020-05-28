@@ -39,7 +39,7 @@ function reservationCheck(){
 			page = "/login";
 		else
 			page = "/reservationCheck"
-		location.href="/ReservationService"+page;
+		location.href=page;
 	});
 }
 
@@ -129,13 +129,13 @@ function expand_fold(){
 //예매하기
 function reserving(product_id){
 	$('.reserving').click(function(){
-		location.href="/ReservationService/reserve/"+product_id;
+		location.href="/reserve/"+product_id;
 	});
 }
 //예매자 한줄평 더보기
 function commentMore(product_id){
 	$(".comment_more").click(function(){
-		location.href="/ReservationService/review/"+product_id;
+		location.href="/review/"+product_id;
 	});
 }
 //상세정보 
@@ -146,7 +146,7 @@ function detailInfo(product_id){
 			$('#detail_info').addClass('current_select');
 			$.ajax({
 				method:"POST",
-				url:"/ReservationService/detail/detailInfo",
+				url:"/detail/detailInfo",
 				contentType:'application/json',
 				data:JSON.stringify({"product_id":product_id}),
 				success: function(data){
@@ -164,7 +164,7 @@ function comeRoute(product_id){
 			$('#come_route').addClass('current_select');
 			$.ajax({
 				method:"POST",
-				url:"/ReservationService/detail/comeRoute",
+				url:"/detail/comeRoute",
 				contentType:'application/json',
 				data:JSON.stringify({"product_id":product_id}),
 				success: function(data){

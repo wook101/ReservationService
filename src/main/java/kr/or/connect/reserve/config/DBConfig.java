@@ -12,41 +12,36 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 
 @Configuration
 @EnableTransactionManagement
-public class DBConfig implements TransactionManagementConfigurer{
+public class DBConfig implements TransactionManagementConfigurer {
 	private String driverClassName = "com.mysql.jdbc.Driver";
-	/*
-	//호스팅 db계정
-	private String url = "";
-	private String username = "";
-	private String password = "";
-	*/
-	
-	//로컬 db계정
+
+	// 호스팅 db계정
+
+	// 로컬 db계정
 	private String url = "jdbc:mysql://localhost:3306/project4_db?useUnicode=true&characterEncoding=utf8";
 	private String username = "connectuser2";
 	private String password = "connect123!@#";
-	
-			//db연결은 위한 dataSource 
-			@Bean
-			public DataSource dataSource() {
-				BasicDataSource dataSource = new BasicDataSource();
-				dataSource.setDriverClassName(driverClassName);
-				dataSource.setUrl(url);
-				dataSource.setUsername(username);
-				dataSource.setPassword(password);
-				return dataSource;
-			}
-			
-			//플랫폼 트랜잭션 매니저
-			@Override
-			public PlatformTransactionManager annotationDrivenTransactionManager() {
-				return transactionManger();
-			}
-			
-			@Bean
-			public PlatformTransactionManager transactionManger() {
-				return new DataSourceTransactionManager(dataSource());
-			}
-	
-	
+
+	// db연결은 위한 dataSource
+	@Bean
+	public DataSource dataSource() {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setDriverClassName(driverClassName);
+		dataSource.setUrl(url);
+		dataSource.setUsername(username);
+		dataSource.setPassword(password);
+		return dataSource;
+	}
+
+	// 플랫폼 트랜잭션 매니저
+	@Override
+	public PlatformTransactionManager annotationDrivenTransactionManager() {
+		return transactionManger();
+	}
+
+	@Bean
+	public PlatformTransactionManager transactionManger() {
+		return new DataSourceTransactionManager(dataSource());
+	}
+
 }

@@ -11,13 +11,13 @@
 <title>상세 페이지</title>
 </head>
 <body>
-	<div class="main" id="${detailTitleInfo.id }">
+	<div class="main" id="${productDetail.id }">
 		<div id="img_slide">
-			<img class="title_img" src="../img/main/${detailTitleInfo.imgPath }">
-			<c:if test="${not empty productImageIdList }">
-				<c:forEach items="${productImageIdList }" var="list">
+			<img class="title_img" src="../img/main/${productDetail.imgPath }">
+			<c:if test="${not empty slideImageIdList }">
+				<c:forEach items="${slideImageIdList }" var="list">
 					<img class="title_img"
-						src="../img/main/${detailTitleInfo.id }_et_${list}.png">
+						src="../img/main/${productDetail.id }_et_${list}.png">
 				</c:forEach>
 			</c:if>
 
@@ -40,11 +40,11 @@
 						${total_imgs_cnt}</span>
 				</div>
 				<img id="arrows_left_btn" src="../img/main/arrows_left.png">
-				<div class="centerTitle">${detailTitleInfo.description }</div>
+				<div class="centerTitle">${productDetail.description }</div>
 				<img id="arrows_right_btn" src="../img/main/arrows_right.png">
 			</div>
 		</div>
-		<div class="detail_content">${detailTitleInfo.content}</div>
+		<div class="detail_content">${productDetail.content}</div>
 		<div class="expandBtn">
 			<div class="more"></div>
 		</div>
@@ -71,17 +71,17 @@
 				</span> <span class="avg_score"> <em>${avgScore}</em> <span>/
 						5.0</span>
 				</span> <span class="comment_count"><i
-					id="${detailCommentListCount}" class="comment_cnt">${detailCommentListCount}건</i>
+					id="${reviewsCount}" class="comment_cnt">${reviewsCount}건</i>
 					등록</span>
 			</div>
 
-			<c:forEach items="${commentlist }" var="list" varStatus="status">
+			<c:forEach items="${reviews }" var="list" varStatus="status">
 				<li class="comment_list">
 					<div>
-						<h3>${detailTitleInfo.description }</h3>
+						<h3>${productDetail.description }</h3>
 						<c:if test="${ status.index eq 0}">
 							<img class="comment_img"
-								src="../img/main/${detailTitleInfo.imgPath }">
+								src="../img/main/${productDetail.imgPath }">
 						</c:if>
 						<p class="comment">${list.comment }</p>
 					</div>
@@ -101,7 +101,7 @@
 		</div>
 		<article class="bottom_detail">
 		<h5>[소개]</h5>
-		<p>${detailTitleInfo.content}</p>
+		<p>${productDetail.content}</p>
 		<h5>[공지사항]</h5>
 		<img class="notice_img" src="../img/main/notice.PNG"> </article>
 		<div class="top" onclick="window.scrollTo(0,0)">↑TOP</div>
