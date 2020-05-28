@@ -15,7 +15,7 @@
 	<div class="main">
 		<div class="reviewWrite_title">
 			<img id="backBtn" onclick="history.back()"
-				src="/ReservationService/img/main/backArrow.png">
+				src="/img/main/backArrow.png">
 			<h2 id="productName">${productInfo.description}</h2>
 		</div>
 		<form id="write_content_area" method="post" action="../reviewRegister" enctype="multipart/form-data">
@@ -28,9 +28,9 @@
 					<div id="star_area">
 						<c:forEach begin="0" end="4">
 							<img class="grayStarImg"
-								src="/ReservationService/img/reviewWrite/star_gray.png">
+								src="/img/reviewWrite/star_gray.png">
 							<img class="redStarImg" style="display: none"
-								src="/ReservationService/img/reviewWrite/star_red.png">
+								src="/img/reviewWrite/star_red.png">
 						</c:forEach>
 						<em id="starScore">0</em>
 					</div>
@@ -40,7 +40,7 @@
 			<textarea id="writeTextBox" name="comment"></textarea>
 			<div class="filebox">
 				<img id="fileBoxImg"
-					src="/ReservationService/img/reviewWrite/fileImg.png">
+					src="/img/reviewWrite/fileImg.png">
 				<label for="fileAdd">파일 추가</label> 
 				<input type="file" name="file" id="fileAdd">
 				<div id="textCount_area">
@@ -49,7 +49,7 @@
 			</div>
 			<div id="thumbnail_area">
 				<img id="closeBtnImg" style="display: none"
-					src="/ReservationService/img/reviewWrite/closeBtnImg.png">
+					src="/img/reviewWrite/closeBtnImg.png">
 				<img id="thumbnailImg" style="display: none">
 			</div>
 		</form>

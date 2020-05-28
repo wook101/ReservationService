@@ -17,7 +17,7 @@ function logout(){
 	  logout.addEventListener("click",function(e){
 		  var text = e.target.innerText;
 		  if(text=="로그아웃"){
-			  location.href="/ReservationService/logout";
+			  location.href="/logout";
 		  }
 	  });
 }
@@ -29,8 +29,8 @@ function reservationCheck(){
 		if(eventText=="예약확인")
 			page="/login";
 		else
-			page="/reservationCheck";
-		location.href="/ReservationService"+page;
+			page="/reserveCheck";
+		location.href=page;
 	});
 }
 //자동 이미지 슬라이딩
@@ -96,7 +96,7 @@ SelectEvent.prototype = {
 		//ajax(카테고리,더보기)
 		ajaxCall : function(jsonData,types){
 			var xhr = new XMLHttpRequest();
-			xhr.open("post","/ReservationService/ajax",true);
+			xhr.open("post","/more",true);
 		 	xhr.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
 		 	xhr.onreadystatechange = function(){
 		 			if(xhr.readyState == 4){
@@ -151,13 +151,13 @@ SelectEvent.prototype = {
 			for(var i=0,len=this.left_list.childElementCount;i<len;i++){
 				this.left_list.children[i].addEventListener("click",function(e){
 					product_id = e.target.parentNode.id;
-					location.href="/ReservationService/detail/"+product_id;
+					location.href="/detail/"+product_id;
 				});
 			}
 			for(var i=0,len=this.right_list.childElementCount;i<len;i++){
 				this.right_list.children[i].addEventListener("click",function(e){
 					product_id = e.target.parentNode.id;
-					location.href="/ReservationService/detail/"+product_id;
+					location.href="/detail/"+product_id;
 				});
 			}
 		},

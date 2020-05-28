@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded",function(){
 //메인페이지로 이동
 function moveToMain(){
 	$('.login_logo_img').click(function(){
-		location.href="/ReservationService";
+		location.href="/";
 	});
 }
 //이메일 유효성 검사
@@ -44,16 +44,18 @@ function myReservationCheckBtn(){
 function sendAjax(){
 	$.ajax({
 		method:'post',
-		url:'/ReservationService/login',
+		url:'/login',
 		contentType:'application/json',
 		data:JSON.stringify({email:$('.login_input_text').val()}),
 		success: function(data){
 			//이메일 DB에 존재 유무 성공 //0이면 이메일정보 없음
-			if(data==0){
-				$('.login_input_text').css('color','red').css('font-size','16px').val('이메일이 일치하지 않습니다.');
-			}else{
+			if(data.success){
 				$('.login_form_area').submit(); //post 검증 후 submit
 			}
+			else{
+				$('.login_input_text').css('color','red').css('font-size','16px').val('이메일이 일치하지 않습니다.');
+			}
+			
 		}
 	});
 }

@@ -22,8 +22,8 @@ public class ReserveDaoSqls {
 	public static final String SELECT_DETAIL_TITLE_BYID = "select product.id, file_name as \"imgPath\", description, content from product,product_image,file_info where product.id=product_image.product_id and product_image.file_id=file_info.id and product_image.type=\"ma\" and product.id=:id";
 	
 	//상세페이지 쿼리
-	public static final String SELECT_DEATIL_COMMENTLIST = "select reservation_info_id,description,score,comment,email, replace(left(reservation_user_comment.modify_date,10),'-','.') as \"modify_date\" from reservation_user_comment, product where reservation_user_comment.product_id=product.id and product_id=:product_id limit :start, :limit";
-	public static final String COUNT_DEATIL_COMMENTLIST ="select count(*) from reservation_user_comment where product_id=:product_id";
+	public static final String SELECT_DEATIL_REVIEWS = "select reservation_info_id,description,score,comment,email, replace(left(reservation_user_comment.modify_date,10),'-','.') as \"modify_date\" from reservation_user_comment, product where reservation_user_comment.product_id=product.id and product_id=:product_id limit :start, :limit";
+	public static final String COUNT_DEATIL_REVIEWS ="select count(*) from reservation_user_comment where product_id=:product_id";
 	
 	//오시는 길 정보 
 	public static final String SELECT_COME_ROUTE_BYID = "select product.id,description,place_lot,place_street,place_name,tel from display_info,product where display_info.product_id=product.id group by id having id=:id";

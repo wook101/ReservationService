@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 function moveToMain(){	//메인페이지로
 	$('#productName').click(function(){	
-		location.href="/ReservationService";
+		location.href="/";
 	});
 }
 //예매자 한줄평 평점 및 별점처리

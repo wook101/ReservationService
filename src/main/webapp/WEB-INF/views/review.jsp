@@ -15,33 +15,33 @@
 	<div class="main">
 		<div class="review_title">
 			<img id="backBtn" onclick="history.back()"
-				src="/ReservationService/img/main/backArrow.png">
-			<h2 id="productName">${detailTitleInfo.description }</h2>
+				src="/img/main/backArrow.png">
+			<h2 id="productName">${productDetail.description }</h2>
 		</div>
 
 		<div class="reserve_user_comment">
 			<h5 class="comment_title">예매자 한줄평</h5>
 			<div class="avg_score_area">
 				<span class="star_off"> <img class="img_off"
-					src="/ReservationService/img/main/star_off.png"> <span
+					src="/img/main/star_off.png"> <span
 					class="star_on"> <img class="img_on"
-						src="/ReservationService/img/main/star_on.png">
+						src="/img/main/star_on.png">
 				</span>
 				</span> <span class="avg_score"> <em>${avgScore }</em> <span>/
 						5.0</span>
 				</span> <span class="comment_count"><i
-					id="${detailCommentListCount}" class="comment_cnt">${detailCommentListCount}건</i>
+					id="${reviewsCount}" class="comment_cnt">${reviewsCount}건</i>
 					등록</span>
 			</div>
 
-			<c:forEach items="${reviewCommentList }" var="list"
+			<c:forEach items="${reviews }" var="list"
 				varStatus="status">
 				<li class="comment_list">
 					<div>
-						<h3>${detailTitleInfo.description }</h3>
+						<h3>${productDetail.description }</h3>
 						<c:if test="${ status.index eq 0}">
 							<img class="comment_img"
-								src="/ReservationService/img/main/${detailTitleInfo.imgPath }">
+								src="/img/main/${productDetail.imgPath }">
 						</c:if>
 						<p class="comment">${list.comment }</p>
 					</div>

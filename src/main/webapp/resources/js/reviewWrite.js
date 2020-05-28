@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 function moveToMain(){	//메인페이지로
 	$('#productName').click(function(){	
-		location.href="/ReservationService";
+		location.href="/";
 	});
 }
 //리뷰쓰기 별점 기능

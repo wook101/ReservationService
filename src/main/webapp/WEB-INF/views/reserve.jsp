@@ -16,26 +16,26 @@
 			<div class="reserve_title">
 				<img id="backBtn" onclick="history.back()"
 					src="../img/main/backArrow.png">
-				<h2>${reserveProductInfo.description }</h2>
+				<h2>${reserveProduct.description }</h2>
 			</div>
 			<div id="img_title_area">
-				<h2>${reserveProductInfo.description }</h2>
+				<h2>${reserveProduct.description }</h2>
 			</div>
 			<img id="reserve_title_img"
-				src="../img/main/${reserveProductInfo.imgPath }">
+				src="../img/main/${reserveProduct.imgPath }">
 			<div class="product_detail_info_area">
 				<h4>장소</h4>
-				<p>${reserveProductInfo.place_name }</p>
+				<p>${reserveProduct.place_name }</p>
 				<h4>관람시간</h4>
-				<p>${reserveProductInfo.opening_hours }</p>
+				<p>${reserveProduct.opening_hours }</p>
 				<h4>요금</h4>
-				<c:forEach items="${productPriceInfo}" var="list">
+				<c:forEach items="${productPrices}" var="list">
 					<p>${list.price_type_real_name}/${list.price}원</p>
 				</c:forEach>
 			</div>
 		</div>
 		<ul id="ticket_select_area">
-			<c:forEach items="${productPriceInfo}" var="list" varStatus="status">
+			<c:forEach items="${productPrices}" var="list" varStatus="status">
 				<li id="${list.price_type_name}" class="list_ticketing">
 					<div class="ticket_cnt_select">
 						<div class="ticket_plus_minus_area">
@@ -73,7 +73,7 @@
 			</div>
 
 			<form id="reservation_user_form" method="post"
-				action="/ReservationService/reserveFormInfo/${reserveProductInfo.id }">
+				action="/reserve/${reserveProduct.id }">
 				<div class="reservation_input_area">
 					<img class="green_check"
 						src="../img/reserve/green_check.png">

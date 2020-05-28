@@ -2,7 +2,7 @@
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <body>
-<c:forEach items="${Lists }" var="reserve" varStatus="status">
+<c:forEach items="${products }" var="reserve" varStatus="status">
 	<c:if test="${status.index % 2 eq 0 }">
 		<li id="${reserve.id}">
 			<img src="img/main/${reserve.imgPath }">
@@ -17,7 +17,7 @@
 ------
 <html>
 <body>
-<c:forEach items="${Lists }" var="reserve" varStatus="status">
+<c:forEach items="${products }" var="reserve" varStatus="status">
 	<c:if test="${status.index%2 eq 1 }">
 		<li id="${reserve.id}">
 			<img src="img/main/${reserve.imgPath }">
@@ -30,4 +30,4 @@
 </body>
 </html>
 ------
-${listCount}
+${productCount}
