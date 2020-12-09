@@ -2,7 +2,7 @@
 
 사용기술 - css, javascript, jQuery, Ajax, java, jsp, jstl, el, spring, springJDBC
 
-## 인텔리제에서 프로젝트 띄우기
+## 인텔리제이에서 이클립스 프로젝트 띄우기
 
 * git clone https://github.com/wook101/ReservationService.git
 * Import Project > Eclips project
