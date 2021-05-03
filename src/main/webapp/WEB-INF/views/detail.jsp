@@ -8,6 +8,7 @@
 <meta name="viewport" content="width==device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/detail.css"></c:url>">
+	<script src="/resources/jquery/jquery-3.6.0.min.js"></script>
 <title>상세 페이지</title>
 </head>
 <body>
@@ -107,7 +108,6 @@
 		<div class="top" onclick="window.scrollTo(0,0)">↑TOP</div>
 
 	</div>
+	<script type="text/javascript" src="<c:url value="/resources/js/detail.js"></c:url>"></script>
 </body>
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="<c:url value="/resources/js/detail.js"></c:url>"></script>
 </html>

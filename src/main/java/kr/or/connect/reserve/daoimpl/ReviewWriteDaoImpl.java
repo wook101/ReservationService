@@ -1,4 +1,4 @@
-package kr.or.connect.reserve.daoImpl;
+package kr.or.connect.reserve.daoimpl;
 
 import static kr.or.connect.reserve.dao.ReserveDaoSqls.INSERT_RESERVATION_USER_COMMENT;
 import static kr.or.connect.reserve.dao.ReserveDaoSqls.SELECT_PRODUCT_INFO_BYID;

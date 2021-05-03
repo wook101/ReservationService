@@ -10,6 +10,7 @@
 <title>한줄평 남기기</title>
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/reviewWrite.css"></c:url>">
+		<script src="/resources/jquery/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -59,5 +60,4 @@
 </body>
 <script type="text/javascript"
 	src="<c:url value="/resources/js/reviewWrite.js"></c:url>"></script>
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 </html>

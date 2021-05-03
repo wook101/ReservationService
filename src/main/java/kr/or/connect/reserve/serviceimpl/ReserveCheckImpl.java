@@ -1,4 +1,4 @@
-package kr.or.connect.reserve.serviceImpl;
+package kr.or.connect.reserve.serviceimpl;
 
 import java.util.List;
 

@@ -1,5 +1,5 @@
 function init(){
-	var product_id=$(".main").attr('id');	//전역 변수 상품id
+	var product_id=document.querySelector(".main").getAttribute("id"); //전역 변수 상품id
 	logo();						//로고버튼
 	starScoreApply();			//예매자 한줄평 평점 및 별점처리
 	reservationCheck();			//예약 확인

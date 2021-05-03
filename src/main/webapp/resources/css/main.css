@@ -16,10 +16,8 @@ body, html {
 }
 
 header {
-	width: var(--width);
 	height:50px;
 	overflow:hidden;
-	position:fixed;
 	padding: 0;
 	background-color: #00c73c;
 	z-index:10;
@@ -52,7 +50,6 @@ header div {
 .e-mail {
 	float:right;
 	text-align:right;
-	width:50%;
 	overflow:auto;
 	margin: 0px 10px 0px 0px;
 	padding: 10px 0px 20px 0px;

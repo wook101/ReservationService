@@ -1,4 +1,4 @@
-package kr.or.connect.reserve.daoImpl;
+package kr.or.connect.reserve.daoimpl;
 
 import static kr.or.connect.reserve.dao.ReserveDaoSqls.SELECT_RESERVATION_INFO_BY_EMAIL;
 import static kr.or.connect.reserve.dao.ReserveDaoSqls.UPDATE_RESERVATION_CHECK_CANCEL_FLAG;

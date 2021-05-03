@@ -9,6 +9,7 @@
 <meta name="viewport" content="width==device-width, initial-scale=1.0 ">
 <link rel="stylesheet"
 	href="<c:url value="/resources/css/review.css"></c:url>">
+		<script src="/resources/jquery/jquery-3.6.0.min.js"></script>
 <title>한줄평 페이지</title>
 </head>
 <body>
@@ -55,7 +56,6 @@
 		</div>
 	</div>
 </body>
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript"
 	src="<c:url value="/resources/js/review.js"></c:url>"></script>
 

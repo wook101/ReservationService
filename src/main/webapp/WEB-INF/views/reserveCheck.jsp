@@ -9,6 +9,7 @@
 <meta name="viewport" content="width==device-width, initial-scale=1.0 ">
 <title>내 예약 확인</title>
 <link rel="stylesheet" href="<c:url value="/resources/css/reservationCheck.css"></c:url>">
+	<script src="/resources/jquery/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -261,6 +262,5 @@
 
 	</div>
 </body>
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/reserveCheck.js"></c:url>"></script>
 </html>

@@ -1,4 +1,4 @@
-package kr.or.connect.reserve.daoImpl;
+package kr.or.connect.reserve.daoimpl;
 
 import static kr.or.connect.reserve.dao.ReserveDaoSqls.LOGIN_INFO_CHECK_BY_EMAIL;
 
